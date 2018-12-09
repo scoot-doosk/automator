@@ -19,8 +19,8 @@ wake_time=int(sys.argv[1])
 lifx = LifxLAN()
 
 # get devices and store in array
-devices = lifx.get_lights()
-light = devices[0]
+#devices = lifx.get_lights()
+light = Light("D0:73:D5:21:C8:34", "10.0.2.61")
 
 light.set_color([0,65535,0,3500], 1, 1)
 light.set_power(True)
