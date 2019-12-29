@@ -1,7 +1,7 @@
 # automator
 
 must first install 
-https://github.com/GadgetReactor/pyHS100
-pip3
-lifx for pip 3
+https://github.com/GadgetReactor/pyHS100,
+pip3,
+lifxlan for using pip3
 
