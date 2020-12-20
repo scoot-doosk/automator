@@ -3,7 +3,7 @@
 
 #import everything from the lifx module and sys to handle arguements
 import sys
-import time
+from time import sleep
 from lifxlan import *
 
 #ensure correct number of arguments are passed in
@@ -21,12 +21,12 @@ lifx = LifxLAN()
 
 # get devices and store in array
 #devices = lifx.get_lights()
-light = Light("D0:73:D5:21:C8:34", "10.0.2.61")
+light = Light("D0:73:D5:21:C8:34", "192.168.1.21")
 
 
 light.set_color([0,0,65535,3500], 1, 1)
 light.set_power(True)
 
 light.set_color([0,65535,0,3500], (wake_time * 60 * 1000), 1)
-time.sleep(waketime*60)
+sleep(wake_time*60)
 light.set_power(False)
